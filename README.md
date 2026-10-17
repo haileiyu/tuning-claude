@@ -15,17 +15,29 @@ Rules and settings that make Claude's answers shorter and easier to read.
 | [rules/short-and-plain.md](rules/short-and-plain.md) | Too much detail, big words |
 | [rules/explain.md](rules/explain.md) | Explanations, based on Andrej Karpathy's post (Oct 2026) |
 
-Copy them into one of these:
+Each file works on its own. Take one or both.
 
-- `~/.claude/CLAUDE.md` for all projects
-- `CLAUDE.md` in a project for that project only
+### Install for all projects
 
-Or import them from your `CLAUDE.md`:
+Claude Code loads every `.md` file in `~/.claude/rules/`.
 
+```sh
+mkdir -p ~/.claude/rules
+cd ~/.claude/rules
+curl -fsSLO https://raw.githubusercontent.com/haileiyu/tuning-claude/main/rules/short-and-plain.md
+curl -fsSLO https://raw.githubusercontent.com/haileiyu/tuning-claude/main/rules/explain.md
 ```
-@path/to/rules/short-and-plain.md
-@path/to/rules/explain.md
-```
+
+Start a new session. To check, ask Claude which rules it has loaded.
+
+### Install for one project
+
+Do the same in `.claude/rules/` inside the project.
+
+### Notes
+
+- Copy the files. Do not symlink them. A symlink to a file outside the project did not load in our test.
+- Rerun the `curl` lines to update.
 
 ## Settings
 

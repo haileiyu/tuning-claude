@@ -21,5 +21,13 @@
 > `git reset --soft HEAD~1`
 >
 > If you already pushed, use `git revert HEAD` instead.
+>
+> <details>
+> <summary>More</summary>
+>
+> - If something goes wrong, `git reflog` finds the old commit.
+> - To make a shortcut: `git config --global alias.undo 'reset --soft HEAD~1'`
+>
+> </details>
 
-The pushed case stays because it prevents a real mistake. Reflog and the alias go.
+The pushed case stays in the main answer because it prevents a real mistake. Reflog and the alias go into the zippy.

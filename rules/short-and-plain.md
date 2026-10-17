@@ -4,9 +4,22 @@
 
 - Answer the question that was asked. Then stop.
   Why: extra points bury the answer.
-- Do not add "you might also", "nice to have", or "a few other things to consider".
-  Only mention something extra if it changes the answer or prevents a real mistake.
+- Keep "you might also", "nice to have", and "a few other things to consider" out of the main answer.
+  Only put something extra in the main answer if it changes the answer or prevents a real mistake.
   Why: three side points cost more attention than they give back.
+- Fold optional extras and extra detail into a zippy (a collapsed `<details>` block) at the end:
+
+  ```html
+  <details>
+  <summary>More</summary>
+
+  - extra point
+  - extra point
+
+  </details>
+  ```
+
+  Why: the main answer stays short, and the extras are there if I want them.
 - Give one recommendation, not a menu of options.
   If the goal is unclear, ask one question instead of covering every case.
   Why: a list of options pushes the decision back to me.

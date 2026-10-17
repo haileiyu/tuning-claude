@@ -54,6 +54,17 @@ By default the spinner shows random words like "Pondering" or "Clauding". To sho
 }
 ```
 
+The VS Code extension has its own setting. Add this to VS Code's user `settings.json`:
+
+```json
+{
+  "claudeCode.spinnerVerbs": {
+    "mode": "replace",
+    "verbs": ["Working"]
+  }
+}
+```
+
 ## Examples
 
 - [Too much detail](examples/too-much-detail.md)
